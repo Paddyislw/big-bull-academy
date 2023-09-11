@@ -22,42 +22,42 @@ const Footer = () => {
         <Link href={"/"} className="block">
           <p className="cursor-pointer  navBtnGreen">Home</p>
         </Link>
-        <Link href={"/contactUs"} className="block">
+        <Link href={"/"} className="block">
           <p className="cursor-pointer  navBtnGreen">About Us</p>
         </Link>
-        <Link href={"/testimonial"} className="block">
+        <Link href={"/"} className="block">
           <p className="cursor-pointer  navBtnGreen">Testimonial</p>
         </Link>
       </div>
       <div className="font-semibold space-y-3 mb:text-sm">
-        <Link href={"/courses"} className="block">
+        <Link href={"/"} className="block">
           <p className="cursor-pointer  navBtnGreen">Our Services</p>
         </Link>
-        <Link href={"/contactUs"} className="block">
+        <Link href={"/"} className="block">
           <p className="cursor-pointer  navBtnGreen">Contact Us</p>
         </Link>
-        <Link href={"/https://telegram.me/begin_trader"} className="block">
+        <Link href={"/"} className="block">
           <p className="cursor-pointer  navBtnGreen">Telegram</p>
         </Link>
       </div>
       <div className="font-semibold space-y-3 mb:text-sm">
         <a
           target="_blank"
-          href="mailto:begintraderr@gmail.com"
+          href="/"
           className="block"
         >
           <p className="cursor-pointer  navBtnGreen">Email Us</p>
         </a>
         <a
           target="_blank"
-          href="https://instagram.com/begin_trader?igshid=MmU2YjMzNjRlOQ=="
+          href="/"
           className="block"
         >
           <p className="cursor-pointer  navBtnGreen">Instagram</p>
         </a>
         <a
           target="_blank"
-          href="https://api.whatsapp.com/send?phone=9629123326"
+          href="/"
           className="block"
         >
           <p className="cursor-pointer  navBtnGreen">WhatsApp</p>
