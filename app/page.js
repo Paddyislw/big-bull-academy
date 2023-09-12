@@ -33,7 +33,7 @@ const Home = () => {
         <HeroSection />
         <div
           className="bg-black opacity-80 absolute top-0 z-0 xmb:h-[740px]"
-          style={{ width: "100%", minHeight: "700px" }}
+          style={{ width: "100%", minHeight: "740px" }}
         ></div>
       </div>
       <WhyChooseUs />

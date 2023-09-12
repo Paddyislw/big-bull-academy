@@ -12,7 +12,7 @@ const HeroSection = () => {
     <div className="mt-10 space-y-10 z-10 relative layout">
       <p className="text-center text-lg font-semibold sm:text-sm">
         <span className="text-indigo-400">❱</span> Trade like a professional
-        trader, even without prior experience
+        trader, even without prior experience {" "}
         <span className="text-indigo-400">❰</span>
       </p>
       <p className="text-center text-4xl font-semibold leading-[45px] sm:text-2xl">
@@ -30,6 +30,7 @@ const HeroSection = () => {
       <p className="text-center text-lg font-semibold sm:text-sm">
       Leverage Expertise for Consistent Profits in Every Trade.
       </p>
+      <button className="block mx-auto bg-indigo-200 text-indigo-900 py-4 px-16 text-2xl rounded-lg font-semibold">Join Now →</button>
       <div className="flex space-x-2 justify-between py-16 sm:grid sm:grid-cols-2 sm:space-x-0 sm:gap-6 sm:justify-items-center">
         <Card>
           <Image

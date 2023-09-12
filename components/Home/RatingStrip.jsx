@@ -8,24 +8,24 @@ import Image from "next/image";
 const RatingStrip = () => {
   return (
     <div className="layout bg-indigo-100">
-      <div className="py-16  flex justify-center space-x-8 mb:grid mb:grid-cols-2 mb:space-x-0 mb:w-fit mb:mx-auto mb:justify-items-center mb:gap-16 xmb:gap-4">
+      <div className="py-20  flex justify-center space-x-12 md:grid  md:grid-cols-2 md:space-x-0 md:w-fit md:mx-auto md:justify-items-center md:gap-16 xmb:gap-4">
         {stripData.map(({ id, title, heading, icon }, index) => (
-          <div key={id} className="flex space-x-8 mb:space-x-0">
+          <div key={id} className="flex space-x-12 mb:space-x-0">
             <div className="flex flex-col items-center">
               <Image
                 src={icon}
                 alt=""
-                className="w-12 h-12 object-contain mb-1 lg:w-10 lg:h-10 mb:w-10 mb:h-10 mb:mb-2"
+                className="w-16 h-16 object-contain mb-1 lg:w-10 lg:h-10 mb:w-10 mb:h-10 mb:mb-2"
               />
-              <p className="font-semibold mb-2 text-sm text-center mb:mb-0 xmb:text-xs">
+              <p className="font-semibold mb-2 text-xl text-center mb:mb-0 xmb:text-xs">
                 {heading}
               </p>
-              <p className="text-2xl font-semibold text-indigo-800 text-center lg:text-xl">
+              <p className="text-3xl font-semibold text-indigo-800 text-center lg:text-xl">
                 {title}
               </p>
             </div>
             {id !== 4 && (
-              <div className="h-full  w-[2px] bg-gray-400 mb:hidden"></div>
+              <div className="h-full  w-[2px] bg-gray-400 md:hidden"></div>
             )}
           </div>
         ))}
