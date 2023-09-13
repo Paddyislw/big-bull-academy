@@ -1,18 +1,13 @@
 import HeroSection from "@/components/Home/HeroSection";
 import Navbar from "@/global/Navbar";
 import React from "react";
-import img1 from "../mocks/1.jpg";
-import img2 from "../mocks/2.jpg";
-import img3 from "../mocks/3.jpg";
-import img4 from "../mocks/4.jpg";
-import img5 from "../mocks/5.jpg";
-import img6 from "../mocks/6.jpg";
 import img7 from "../mocks/7.jpg";
 import WhyChooseUs from "@/components/Home/WhyChooseUs";
 import ServiceSection from "@/components/Home/ServiceSection";
 import RatingStrip from "@/components/Home/RatingStrip";
 import FAQSection from "@/components/Home/FAQSection";
 import Footer from "@/global/Footer";
+import Testimonail from "@/components/Home/Testimonail";
 
 const Home = () => {
   //console.log(img1,'img')
@@ -39,6 +34,7 @@ const Home = () => {
       <WhyChooseUs />
       <RatingStrip />
       <ServiceSection />
+      <Testimonail />
       <FAQSection />
       <Footer />
     </div>
