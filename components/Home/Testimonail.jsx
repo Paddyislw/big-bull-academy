@@ -71,7 +71,7 @@ const Testimonail = () => {
         <Slider {...settings}>
           {imgData.map(({ id, image }) => (
             <div key={id}>
-              <Image alt="" src={image} className="w-[300px] h-[580px]" />
+              <Image alt="" src={image}  className="w-[300px] h-[580px]" priority={true}/>
             </div>
           ))}
         </Slider>
