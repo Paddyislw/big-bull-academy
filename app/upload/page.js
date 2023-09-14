@@ -1,8 +1,28 @@
 "use client";
+import MediaSection from "@/components/upload/MediaSection";
+import {
+  uploadImage,
+  useUploadImage,
+  useUploadImageDatabase,
+} from "@/uploadApi";
+import { useQueryClient } from "@tanstack/react-query";
 import Image from "next/image";
 import React, { useState } from "react";
 
 const Upload = () => {
+  const queryClient = useQueryClient();
+
+  const {
+    mutate: mutateDatabase,
+    isLoading: loadingDatabase,
+    error: errorDatabase,
+  } = useUploadImageDatabase();
+
+  const { mutate, isLoading, error } = useUploadImage(
+    mutateDatabase,
+    queryClient
+  );
+
   const [selectedFile, setSelectedFile] = useState({
     file: null,
     fileName: "",
@@ -37,7 +57,19 @@ const Upload = () => {
       }
     }
   };
-  console.log("file", selectedFile);
+
+  const handleUpload = () => {
+    if (selectedFile.file) {
+      const formData = new FormData();
+      formData.append("file", selectedFile.file);
+      formData.append("upload_preset", "bigbulltrader");
+      formData.append("cloud_name", "dqjnzwewf");
+      mutate(formData);
+    }
+  };
+
+  if (error || errorDatabase) return "An error has occurred: " + error.message;
+
   return (
     <div className="layout py-10">
       <p className="text-4xl font-semibold">Media</p>
@@ -62,26 +94,30 @@ const Upload = () => {
           <Image
             alt=""
             src={selectedFile.blobFile}
-            width={300}
-            height={600}
-            className="object-contain"
+            width={200}
+            height={400}
+            className="border border-black rounded h-[400px] w-[200px]"
           />
         )}
         {allowedVideoTypes.includes(selectedFile.fileType) && (
           <Image
             alt=""
             src={selectedFile.blobFile}
-            width={300}
-            height={600}
-            className="object-contain"
+            width={200}
+            height={400}
+            className="border border-black rounded h-[400px] w-[200px]"
           />
         )}
         {selectedFile.fileType !== "" && (
-          <button className="mt-4 w-[300px] bg-indigo-50 text-indigo-700 font-semibold py-2 rounded-lg border border-indigo-800 shadow-xl">
-            Upload
+          <button
+            className="mt-4 w-[300px] bg-indigo-50 text-indigo-700 font-semibold py-2 rounded-lg border border-indigo-800 shadow-xl"
+            onClick={handleUpload}
+          >
+            {isLoading || loadingDatabase ? "...Loading..." : "Upload"}
           </button>
         )}
       </div>
+      <MediaSection />
     </div>
   );
 };

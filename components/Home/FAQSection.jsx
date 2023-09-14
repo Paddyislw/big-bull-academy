@@ -17,19 +17,26 @@ const FAQSection = () => {
 };
 
 const FAQ = ({ id, question, answer }) => {
-  const [show, setShow] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const toggleExpanded = () => setExpanded((current) => !current);
+
   return (
     <div
-      className="bg-indigo-100 rounded-xl cursor-pointer w-full"
-      onClick={() => setShow((prev) => !prev)}
+      className="my-2 sm:my-4 md:my-6 shadow-lg rounded cursor-pointer bg-white border "
+      onClick={toggleExpanded}
     >
-      <div className="p-5 bg-indigo-100 rounded-xl font-semibold flex justify-between">
-        <p>{question}</p>
-        <p>⌄</p>
+      <div className="px-6 text-left items-center h-16 select-none flex justify-between flex-row bg-indigo-100">
+
+        <h5 className="flex-1 font-semibold">{question}</h5>
+        <div className="flex-none pl-2">{expanded ? '-' : '+'}</div>
       </div>
-      {show && (
-        <p className="p-5 bg-indigo-50 rounded-b-xl text-gray-700">{answer}</p>
-      )}
+      <div
+        className={`px-6 rounded  overflow-hidden transition-[max-height] duration-500 ease-in bg-indigo-50 ${
+          expanded ? "max-h-40" : "max-h-0"
+        }`}
+      >
+        <p className="py-4 text-left rounded">{answer}</p>
+      </div>
     </div>
   );
 };

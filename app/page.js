@@ -41,14 +41,20 @@ const Home = () => {
       <FAQSection />
       <Footer />
 
-      {showModal && (
+      {
         <div
-          className="h-screen w-full z-[99999]  fixed inset-0 flex justify-center items-center"
+          className={`h-screen w-full z-[99999] fixed inset-0 flex justify-center items-center transition-opacity duration-300 ${
+            showModal ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
           style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
         >
-          <div className="w-[370px]  bg-gray-200 border opacity-100 relative p-4 rounded-xl">
+          <div
+            className={`w-[370px] bg-gray-200 border relative p-4 rounded-xl ease-in-out transition-all duration-1000   ${
+              showModal ? "scale-100" : "scale-50"
+            }`}
+          >
             <div
-              className="absolute top-0 right-0 p-1 cursor-pointer"
+              className="absolute top-0 right-0 pr-2 cursor-pointer"
               onClick={() => setShowModal(false)}
             >
               ✖
@@ -73,7 +79,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-      )}
+      }
     </div>
   );
 };
