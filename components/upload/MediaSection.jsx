@@ -32,13 +32,24 @@ const MediaSection = () => {
           ? "NO DATA AVAILABLE"
           : data.map((item, index) => (
               <div key={index} className="w-[200px] h-[500px]">
-                <Image
-                  src={item?.url}
-                  alt=""
-                  width={200}
-                  height={400}
-                  className="border border-black rounded h-[400px] w-[200px]"
-                />
+                {item?.url.endsWith(".mp4") ? (
+                  <video
+                    controls
+                    loop
+                    style={{ width: "200px", height: "400px" }}
+                  >
+                    <source src={item?.url} />
+                  </video>
+                ) : (
+                  <Image
+                    src={item?.url}
+                    alt=""
+                    width={200}
+                    height={400}
+                    className="border border-black rounded h-[400px] w-[200px]"
+                  />
+                )}
+
                 <button
                   className="bg-red-500 block mx-auto mt-4 py-2 px-10 text-white rounded"
                   onClick={() => mutate(item?._id)}

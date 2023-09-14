@@ -7,8 +7,10 @@ import Telegram from "../../utils/svg/Telegram.svg";
 import Youtube from "../../utils/svg/Youtube.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { useInView } from "react-intersection-observer";
 
 const HeroSection = () => {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
   return (
     <div className="mt-10 space-y-10 z-10 relative layout">
       <p className="text-center text-lg font-semibold sm:text-sm">
@@ -40,8 +42,11 @@ const HeroSection = () => {
           Join Now →
         </button>
       </Link>
-      <div className="flex space-x-2 justify-between py-16 sm:grid sm:grid-cols-2 sm:space-x-0 sm:gap-6 sm:justify-items-center">
-        <Card>
+      <div
+        ref={ref}
+        className="flex space-x-2 justify-between py-16 sm:grid sm:grid-cols-2 sm:space-x-0 sm:gap-6 sm:justify-items-center"
+      >
+        <Card className={"animate-scale isVisible leafBox-1"} inView={inView}>
           <Image
             className="w-10 h-9 object-contain mb:w-9 mb:h-6"
             alt=""
@@ -51,7 +56,7 @@ const HeroSection = () => {
             Trusted by <Span className="text-2xl"> 80k+</Span> Subscribers
           </p>
         </Card>
-        <Card>
+        <Card className={"animate-scale isVisible leafBox-2"} inView={inView}>
           <Image
             className="w-10 h-8 object-contain mb:w-8 mb:h-6"
             alt=""
@@ -61,7 +66,7 @@ const HeroSection = () => {
             <Span className="text-2xl">115k+</Span> Telegram subscribers
           </p>
         </Card>
-        <Card>
+        <Card className={"animate-scale isVisible leafBox-3"} inView={inView}>
           <Image
             className="w-10 h-8 object-contain mb:w-8 mb:h-6"
             alt=""
@@ -71,7 +76,7 @@ const HeroSection = () => {
             <Span className="text-2xl">SEBI</Span> registered
           </p>
         </Card>
-        <Card>
+        <Card className={"animate-scale isVisible leafBox-4"} inView={inView}>
           <Image
             className="w-10 h-8 object-contain mb:w-8 mb:h-6"
             alt=""
@@ -106,10 +111,12 @@ const typeSequence = [
   },
 ];
 
-const Card = ({ children }) => {
+const Card = ({ children, className, inView }) => {
   return (
     <div
-      className="w-[300px] h-[110px]  rounded-lg p-2 flex items-center text-black font-semibold flex-col justify-center space-y-1 bg-primaryExtraLight sm:w-[250px] mb:w-[170px] mb:h-[90px]"
+      className={`${
+        inView ? className : "notVisible"
+      } w-[300px] h-[110px]  rounded-lg p-2 flex items-center text-black font-semibold flex-col justify-center space-y-1 bg-primaryExtraLight sm:w-[250px] mb:w-[170px] mb:h-[90px]`}
       //   style={{
       //     background: "rgb(129,140,248)",
       //     background:

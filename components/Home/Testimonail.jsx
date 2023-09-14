@@ -10,8 +10,10 @@ import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { useImages } from "@/uploadApi";
 
 const Testimonail = () => {
+  const { data, isLoading, isFetching, error } = useImages();
   const settings = {
     dots: false,
     infinite: true,
@@ -22,9 +24,9 @@ const Testimonail = () => {
     autoplaySpeed: 0,
     cssEase: "linear",
     arrows: false,
-    focusOnSelect:false,
-    pauseOnFocus:false,
-    pauseOnHover:false,
+    focusOnSelect: false,
+    pauseOnFocus: false,
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1554,
@@ -56,6 +58,10 @@ const Testimonail = () => {
       },
     ],
   };
+
+  if (error) return "An error has occurred: " + error.message;
+  console.log("data", data);
+
   return (
     <div className="overflow-hidden bg-primaryExtraLight py-20">
       <div className="layout">
@@ -68,13 +74,38 @@ const Testimonail = () => {
       </div>
 
       <div className="bg-primaryExtraLight">
-        <Slider {...settings}>
-          {imgData.map(({ id, image }) => (
-            <div key={id}>
-              <Image alt="" src={image}  className="w-[300px] h-[580px]" priority={true}/>
-            </div>
-          ))}
-        </Slider>
+        {isLoading ? (
+          <div className="h-[580px] w-full items-center justify-center flex">
+            <div className="w-[70px] h-[70px] border-[6px] border-t-primaryDark rounded-full animate-spin"></div>
+          </div>
+        ) : (
+          <Slider {...settings}>
+            {data.map((item) => (
+              <div key={item?._id}>
+                {item?.url.endsWith(".mp4") ? (
+                  <video
+                    controls
+                    loop
+                    width={300}
+                    height={600}
+
+                  >
+                    <source src={item?.url} />
+                  </video>
+                ) : (
+                  <Image
+                    alt=""
+                    width={200}
+                    height={400}
+                    src={item?.url}
+                    className="w-[300px] h-[580px]"
+                    priority={true}
+                  />
+                )}
+              </div>
+            ))}
+          </Slider>
+        )}
       </div>
     </div>
   );

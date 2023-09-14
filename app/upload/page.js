@@ -4,6 +4,7 @@ import {
   uploadImage,
   useUploadImage,
   useUploadImageDatabase,
+  useUploadVideo,
 } from "@/uploadApi";
 import { useQueryClient } from "@tanstack/react-query";
 import Image from "next/image";
@@ -22,6 +23,12 @@ const Upload = () => {
     mutateDatabase,
     queryClient
   );
+
+  const {
+    mutate: uploadVideo,
+    isLoading: uploadVideoLoading,
+    error: uploadVideError,
+  } = useUploadVideo(mutateDatabase, queryClient);
 
   const [selectedFile, setSelectedFile] = useState({
     file: null,
@@ -58,13 +65,20 @@ const Upload = () => {
     }
   };
 
+  console.log(selectedFile.fileType,'debug...')
+
   const handleUpload = () => {
     if (selectedFile.file) {
       const formData = new FormData();
       formData.append("file", selectedFile.file);
       formData.append("upload_preset", "bigbulltrader");
       formData.append("cloud_name", "dqjnzwewf");
-      mutate(formData);
+      if (allowedImageTypes.includes(selectedFile.fileType)) {
+        mutate(formData);
+      }
+      if (allowedVideoTypes.includes(selectedFile.fileType)) {
+        uploadVideo(formData);
+      }
     }
   };
 
@@ -100,18 +114,15 @@ const Upload = () => {
           />
         )}
         {allowedVideoTypes.includes(selectedFile.fileType) && (
-          <Image
-            alt=""
-            src={selectedFile.blobFile}
-            width={200}
-            height={400}
-            className="border border-black rounded h-[400px] w-[200px]"
-          />
+          <video autoPlay controls loop style={{ width: "200px", height: "400px" }}>
+            <source src={selectedFile.blobFile} />
+          </video>
         )}
         {selectedFile.fileType !== "" && (
           <button
             className="mt-4 w-[300px] bg-indigo-50 text-indigo-800 font-semibold py-2 rounded-lg border border-indigo-800 shadow-xl"
             onClick={handleUpload}
+            disabled={isLoading || uploadVideoLoading}
           >
             {isLoading || loadingDatabase ? "...Loading..." : "Upload"}
           </button>

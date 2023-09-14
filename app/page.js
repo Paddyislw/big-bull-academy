@@ -3,6 +3,7 @@ import HeroSection from "@/components/Home/HeroSection";
 import Navbar from "@/global/Navbar";
 import React, { useEffect, useState } from "react";
 import img7 from "../mocks/7.jpg";
+import img8 from '../utils/72.png'
 import WhyChooseUs from "@/components/Home/WhyChooseUs";
 import ServiceSection from "@/components/Home/ServiceSection";
 import RatingStrip from "@/components/Home/RatingStrip";
@@ -33,7 +34,7 @@ const Home = () => {
       >
         <Navbar />
         <HeroSection />
-        <div className="bg-black opacity-80 absolute top-0 z-0  w-full h-[750px] sm:h-[800px] xmb:h-[850px]"></div>
+        <div className="bg-yellow-900 opacity-80 absolute top-0 z-0  w-full h-[750px] sm:h-[800px] xmb:h-[850px]"></div>
       </div>
       <WhyChooseUs />
       <RatingStrip />

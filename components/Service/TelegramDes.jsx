@@ -16,7 +16,7 @@ const TelegramDes = () => {
         <div className="md:mt-4 w-full mt-10">
           <div
             className={`border p-3 rounded-lg  shadow  ${
-              inView ? "animate-pop-in-down leafBox-3" : "notVisible"
+              inView ? "animate-pop-in-down leafBox-1" : "notVisible"
             }`}
           >
             <p className="text-2xl  font-semibold text-indigo-950 ">
@@ -41,7 +41,7 @@ const TelegramDes = () => {
         </div>
 
         <div
-          className="border mt-10 rounded-lg  p-4 flex flex-col space-y-4 shadow-xl"
+          className={`${inView?'animate-scale leafBox-2':'notVisible'} border mt-10 rounded-lg  p-4 flex flex-col space-y-4 shadow-xl`}
           style={{ maxWidth: "400px" }}
         >
           <Image

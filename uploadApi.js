@@ -1,12 +1,20 @@
 "use client";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
-let baseUrl = "http://localhost:5000";
+let baseUrl = "https://bigbulltrader-backend.up.railway.app";
 
 export const uploadImage = async (formData) => {
   console.log("credentials", formData);
   const response = await axios.post(
     "https://api.cloudinary.com/v1_1/dqjnzwewf/image/upload",
+    formData
+  );
+  return response?.data?.url;
+};
+export const uploadVideo = async (formData) => {
+  console.log("credentials", formData);
+  const response = await axios.post(
+    "https://api.cloudinary.com/v1_1/dqjnzwewf/video/upload",
     formData
   );
   return response?.data?.url;
@@ -29,11 +37,19 @@ export const deleteImage = async (id) => {
   const response = await axios.delete(`${baseUrl}/delete-one/${id}`);
 };
 
-
 export const useUploadImage = (mutateFn, queryClient) =>
   useMutation({
     mutationKey: ["uploadImage"],
     mutationFn: uploadImage,
+    onSuccess: (imageUrl) => {
+      mutateFn({ imageUrl, queryClient });
+    },
+  });
+
+export const useUploadVideo = (mutateFn, queryClient) =>
+  useMutation({
+    mutationKey: ["uploadVideo"],
+    mutationFn: uploadVideo,
     onSuccess: (imageUrl) => {
       mutateFn({ imageUrl, queryClient });
     },
@@ -61,5 +77,3 @@ export const useDeleteImage = (queryClient) =>
       queryClient.invalidateQueries("images");
     },
   });
-
-
