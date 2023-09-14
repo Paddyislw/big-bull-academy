@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const RatingStrip = () => {
   return (
-    <div className="layout bg-indigo-100">
+    <div className="layout bg-primaryLight">
       <div className="py-20  flex justify-center space-x-12 md:grid  md:grid-cols-2 md:space-x-0 md:w-fit md:mx-auto md:justify-items-center md:gap-16 xmb:gap-4">
         {stripData.map(({ id, title, heading, icon }, index) => (
           <div key={id} className="flex space-x-12 mb:space-x-0">
@@ -20,7 +20,7 @@ const RatingStrip = () => {
               <p className="font-semibold mb-2 text-xl text-center mb:mb-0 xmb:text-xs">
                 {heading}
               </p>
-              <p className="text-3xl font-semibold text-indigo-800 text-center lg:text-xl">
+              <p className="text-3xl font-semibold text-primaryDark text-center lg:text-xl">
                 {title}
               </p>
             </div>

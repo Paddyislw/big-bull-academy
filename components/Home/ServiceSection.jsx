@@ -5,7 +5,7 @@ import Group from "../../mocks/Group.png";
 const ServiceSection = () => {
   return (
     <div className="layout py-24">
-      <p className="text-indigo-800 font-semibold text-center ">Our Service</p>
+      <p className="text-primaryDark font-semibold text-center ">Our Service</p>
       <p className="text-4xl font-semibold text-center">
         We provide the perfect Solution <br /> to your business growth
       </p>
@@ -19,7 +19,7 @@ const ServiceSection = () => {
         <div className="w-1/2 space-y-6 md:w-fit">
           {pointsData.map((item, index) => (
             <div key={index} className="flex space-x-2">
-              <p>✔️</p>
+              <p>t</p>
               <p className="font-semibold">{item}</p>
             </div>
           ))}
@@ -53,7 +53,7 @@ const ServiceSection = () => {
             </p>
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div> */}
-          <button className="bg-indigo-200 py-3 px-4 rounded-lg text-lg font-semibold">
+          <button className="bg-primaryLight py-3 px-4 rounded-lg text-lg font-semibold">
             Learn More →
           </button>
         </div>

@@ -2,6 +2,8 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import logo from "../utils/icon.png";
+import Image from "next/image";
 
 const Navbar = () => {
   const path = usePathname();
@@ -15,18 +17,28 @@ const Navbar = () => {
       : {};
   return (
     <div
-      className="layout flex justify-between h-[70px] items-center z-10 relative"
+      className="layout flex justify-between h-[100px] items-center z-10 relative"
       style={style}
     >
       <Link href={"/"}>
-        <div>Logo</div>
+        <div>
+          <Image
+            src={logo}
+            alt="logo"
+            className="w-[110px] lg:w-[100px] sm:w-[90px]"
+          />
+        </div>
       </Link>
-      <div className="flex space-x-2">
+      <div className="flex space-x-4">
         <Link href={"/"}>
-          <p>Home</p>
+          <p className="border-2  text-primaryExtraLight font-semibold py-1 px-4 rounded">
+            Home
+          </p>
         </Link>
         <Link href={"/service"}>
-          <p>Service</p>
+          <p className="bg-primaryExtraLight hover:bg-indigo-100 text-primaryDark border-2   font-semibold py-1 px-4 rounded">
+            Service
+          </p>
         </Link>
       </div>
     </div>

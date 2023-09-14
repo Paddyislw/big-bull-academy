@@ -11,8 +11,11 @@ module.exports = {
     extend: {
       colors: {
         primary: "#006e44",
-        primaryLight: "#7FDBB0",
-        primaryDark: "#012618",
+        // primaryLight: "#818cf8",
+        // primaryDark: "#3730a3",
+        primaryExtraLight:'#fcf6ed',
+        primaryLight: "#fce2c2",
+        primaryDark: "#bc6d0f",
       },
     },
     screens: {

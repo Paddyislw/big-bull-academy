@@ -5,7 +5,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div
-      className={`layout flex justify-between py-24 sm:grid sm:grid-cols-2 sm:justify-items-center sm: gap-4 bg-[#110a19] text-white`}
+      className={`layout flex justify-between py-24 sm:grid sm:grid-cols-2 sm:justify-items-center sm: gap-4 bg-gray-950 text-white`}
     >
       <div>
         <div className="flex items-center mb-2">

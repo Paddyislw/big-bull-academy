@@ -57,7 +57,7 @@ const Testimonail = () => {
     ],
   };
   return (
-    <div className="overflow-hidden bg-indigo-50 py-20">
+    <div className="overflow-hidden bg-primaryExtraLight py-20">
       <div className="layout">
         <p className="text-5xl font-semibold text-center mb-2 lg:text-4xl sm:text-3xl">
           Adored by Our Customers 💟
@@ -67,7 +67,7 @@ const Testimonail = () => {
         </p>
       </div>
 
-      <div className="bg-indigo-50">
+      <div className="bg-primaryExtraLight">
         <Slider {...settings}>
           {imgData.map(({ id, image }) => (
             <div key={id}>

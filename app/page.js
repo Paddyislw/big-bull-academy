@@ -9,6 +9,7 @@ import RatingStrip from "@/components/Home/RatingStrip";
 import FAQSection from "@/components/Home/FAQSection";
 import Footer from "@/global/Footer";
 import Testimonail from "@/components/Home/Testimonail";
+import Link from "next/link";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -74,9 +75,14 @@ const Home = () => {
                 <p>✅ Min Capital: 15K</p>
               </div>
             </div>
-            <button className="w-full bg-blue-200 p-2 text-xl font-semibold mt-5 rounded-lg">
-              Join Now 👉{" "}
-            </button>
+            <Link
+              href={"https://telegram.me/intradayjackpot_official"}
+              target="_blank"
+            >
+              <button className="w-full bg-blue-200 p-2 text-xl font-semibold mt-5 rounded-lg">
+                Join Now 👉{" "}
+              </button>{" "}
+            </Link>
           </div>
         </div>
       }

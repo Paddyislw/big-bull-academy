@@ -76,7 +76,7 @@ const Upload = () => {
       <div className="mt-4">
         <label
           htmlFor="upload"
-          className="cursor-pointer border-2 border-indigo-700 text-center py-10  border-dashed block w-[340px] rounded-xl bg-indigo-50 text-xl font-semibold text-indigo-700"
+          className="cursor-pointer border-2 border-indigo-700 text-center py-10  border-dashed block w-[340px] rounded-xl bg-indigo-50 text-xl font-semibold text-indigo-800"
         >
           Choose File
         </label>
@@ -88,7 +88,7 @@ const Upload = () => {
         />
         <p className="text-lg font-semibold m-2">
           FileName: -{" "}
-          <span className="text-indigo-900">{selectedFile.fileName}</span>
+          <span className="text-indigo-800">{selectedFile.fileName}</span>
         </p>
         {allowedImageTypes.includes(selectedFile.fileType) && (
           <Image
@@ -110,7 +110,7 @@ const Upload = () => {
         )}
         {selectedFile.fileType !== "" && (
           <button
-            className="mt-4 w-[300px] bg-indigo-50 text-indigo-700 font-semibold py-2 rounded-lg border border-indigo-800 shadow-xl"
+            className="mt-4 w-[300px] bg-indigo-50 text-indigo-800 font-semibold py-2 rounded-lg border border-indigo-800 shadow-xl"
             onClick={handleUpload}
           >
             {isLoading || loadingDatabase ? "...Loading..." : "Upload"}

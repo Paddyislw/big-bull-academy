@@ -9,3 +9,279 @@
 .slick-slide div {
   outline: none;
 }
+
+
+/* .rounded-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid red
+} */
+/* .rounded-table th,
+.rounded-table td {
+  border: 1px solid #cbd5e0;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+.rounded-table th {
+  background-color: #f2f2f2;
+} */
+
+/* ^ Animate Dropdown  */
+.dropdown-content {
+  display: block;
+  animation: fadeInDown 0.5s;
+  transform-origin: top center;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scaleY(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+/* ^ Animation Pop in ^ */
+
+.animate-pop-in {
+  -webkit-animation: no-transform 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  animation: no-transform 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  opacity: 0;
+  -webkit-transform: translateY(-4rem) scale(0.8);
+  transform: translateY(-4rem) scale(0.8);
+}
+
+.animate-image-pop-in {
+  opacity: 0;
+  -webkit-transform: translateY(-4rem);
+  transform: translateY(-4rem);
+  animation: no-transform 2s 0.4s cubic-bezier(0, 0.5, 0, 1) forwards;
+}
+
+@-webkit-keyframes no-transform {
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes no-transform {
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/* ^ Animation Scale Downwards^ */
+
+.animate-scale {
+  animation: scaleTransform 3s cubic-bezier(0, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transform: scale(0);
+}
+
+@keyframes scaleTransform {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@-webkit-keyframes scaleTransform {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/* ^ Animation Pop In Upwards^ */
+.animate-pop-in-down {
+  animation: popInUpwards 4s 0.25s cubic-bezier(0, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transform: translateY(-4rem);
+}
+
+@keyframes popInUpwards {
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@-webkit-keyframes popInUpwards {
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+/* ^ Animation Bottom Sliding Bar^ */
+.navBtn::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  display: block;
+  border-radius: 20%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navBtn:hover::after {
+  transform: scaleX(1);
+}
+
+.navBtnGreen::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: green;
+  display: block;
+  border-radius: 20%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navBtnGreen:hover::after {
+  transform: scaleX(1);
+}
+
+.title {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.subtitle {
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.hero-btn {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.leafBox-1 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.leafBox-2 {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.leafBox-3 {
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+.leafBox-4 {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.leafBox-5 {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+.leafBox-6 {
+  -webkit-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
+
+.isVisible {
+  opacity: 1;
+}
+
+.notVisible {
+  opacity: 0;
+}
+
+/* .heading {
+  transform: translateY(-4rem);
+  transition: popInUpwards 4s 0.25s cubic-bezier(0, 1, 0.3, 1);
+  will-change: popInUpwards;
+} */
+/* .headingVisible{
+  transform:  translateY(0rem);
+} */
+
+@keyframes glow {
+  0% {
+    background-color: #006e44;
+  }
+  25% {
+    background-color: #ff6600;
+  }
+  50% {
+    background-color: #d32f2f;
+  }
+  75% {
+    background-color: #007acc;
+  }
+  100% {
+    background-color: #006e44;
+  }
+}
+
+/* Apply the glow animation to the button */
+.glow-button {
+  background-color: #f6e05e;
+  /* color: #333; */
+  animation: glow 2s infinite;
+}
+
+.btn-3 {
+}
+
+
+
+.btn {
+  flex: 1 1 auto;
+  padding: 12px 0px;
+  width: 200px;
+  text-align: center;
+  text-transform: uppercase;
+  background-size: 200% auto;
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    #38c876 0%,
+    #1c93e3 50%,
+    #38c876 100%
+  );
+  border-radius: 40px;
+  animation: infiniteBackground 1s linear infinite; 
+  font-size: 15px;
+}
+
+.btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
+/* Define the animation */
+@keyframes infiniteBackground {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}

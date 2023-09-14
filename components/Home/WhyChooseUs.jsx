@@ -10,7 +10,7 @@ import RelableProfit from "../../utils/svg/RelableProfit.svg";
 const WhyChooseUs = () => {
   return (
     <div className="layout pt-20 pb-24">
-      <p className="text-center font-bold text-lg text-indigo-500">
+      <p className="text-center font-bold text-lg text-primaryDark">
         Why Choose Us?
       </p>
       <p className="text-center text-4xl font-semibold mb-4">
@@ -32,7 +32,7 @@ const WhyChooseUs = () => {
               <Image
                 alt=""
                 src={icon}
-                className="w-16 bg-indigo-100 p-4 rounded-xl mb:w-10 lg:w-12 sm:p-3"
+                className="w-16 bg-primaryExtraLight p-4 rounded-xl mb:w-10 lg:w-12 sm:p-3"
               />
               <p className="font-semibold mb:text-sm text-xl lg:text-lg">
                 {heading}

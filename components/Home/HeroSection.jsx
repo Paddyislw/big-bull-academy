@@ -6,14 +6,15 @@ import Registered from "../../utils/svg/Registered.svg";
 import Telegram from "../../utils/svg/Telegram.svg";
 import Youtube from "../../utils/svg/Youtube.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
     <div className="mt-10 space-y-10 z-10 relative layout">
       <p className="text-center text-lg font-semibold sm:text-sm">
-        <span className="text-indigo-400">❱</span> Trade like a professional
-        trader, even without prior experience {" "}
-        <span className="text-indigo-400">❰</span>
+        <span className="text-primaryLight">❱</span> Trade like a professional
+        trader, even without prior experience{" "}
+        <span className="text-primaryLight">❰</span>
       </p>
       <p className="text-center text-4xl font-semibold leading-[45px] sm:text-2xl">
         Revealing the{" "}
@@ -22,15 +23,23 @@ const HeroSection = () => {
           wrapper="span"
           cursor={true}
           repeat={Infinity}
-          style={{ color: "#818CF8" }}
+          style={{ color: "#bc6d0f" }}
         />{" "}
         to Profitable <br className="sm:hidden" /> Trading in Bank Nifty, Nifty
         and Stock <br className="sm:hidden" /> options from Day One
       </p>
       <p className="text-center text-lg font-semibold sm:text-sm">
-      Leverage Expertise for Consistent Profits in Every Trade.
+        Leverage Expertise for Consistent Profits in Every Trade.
       </p>
-      <button className="block mx-auto bg-indigo-200 text-indigo-900 py-4 px-16 text-2xl rounded-lg font-semibold">Join Now →</button>
+      <Link
+        href={"https://telegram.me/intradayjackpot_official"}
+        target="_blank"
+        className="block"
+      >
+        <button className="block mx-auto bg-primaryExtraLight text-primaryDark py-4 px-16 text-2xl rounded-lg font-semibold">
+          Join Now →
+        </button>
+      </Link>
       <div className="flex space-x-2 justify-between py-16 sm:grid sm:grid-cols-2 sm:space-x-0 sm:gap-6 sm:justify-items-center">
         <Card>
           <Image
@@ -100,7 +109,7 @@ const typeSequence = [
 const Card = ({ children }) => {
   return (
     <div
-      className="w-[300px] h-[110px]  rounded-lg p-2 flex items-center text-black font-semibold flex-col justify-center space-y-1 bg-gray-300 sm:w-[250px] mb:w-[170px] mb:h-[90px]"
+      className="w-[300px] h-[110px]  rounded-lg p-2 flex items-center text-black font-semibold flex-col justify-center space-y-1 bg-primaryExtraLight sm:w-[250px] mb:w-[170px] mb:h-[90px]"
       //   style={{
       //     background: "rgb(129,140,248)",
       //     background:

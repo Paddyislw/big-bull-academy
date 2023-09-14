@@ -25,13 +25,13 @@ const FAQ = ({ id, question, answer }) => {
       className="my-2 sm:my-4 md:my-6 shadow-lg rounded cursor-pointer bg-white border "
       onClick={toggleExpanded}
     >
-      <div className="px-6 text-left items-center h-16 select-none flex justify-between flex-row bg-indigo-100">
+      <div className="px-6 text-left items-center h-16 select-none flex justify-between flex-row bg-primaryLight">
 
         <h5 className="flex-1 font-semibold">{question}</h5>
         <div className="flex-none pl-2">{expanded ? '-' : '+'}</div>
       </div>
       <div
-        className={`px-6 rounded  overflow-hidden transition-[max-height] duration-500 ease-in bg-indigo-50 ${
+        className={`px-6 rounded  overflow-hidden transition-[max-height] duration-500 ease-in bg-primaryExtraLight ${
           expanded ? "max-h-40" : "max-h-0"
         }`}
       >

@@ -3,14 +3,15 @@ import Image from "next/image";
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import TelegramGroup from "../../utils/svg/TelegramGroup.svg";
+import check from "../../utils/svg/check.svg";
 
 const TelegramDes = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
   let description = "";
   return (
-    <div className="">
+    <div className="" ref={ref}>
       <div
-        className={`md:items-center items-start flex justify-between space-x-10 md:flex-col-reverse md:space-x-0 md:my-2`}
+        className={`md:items-center items-center flex justify-between space-x-10 md:flex-col-reverse md:space-x-0 md:my-2`}
       >
         <div className="md:mt-4 w-full mt-10">
           <div
@@ -18,16 +19,17 @@ const TelegramDes = () => {
               inView ? "animate-pop-in-down leafBox-3" : "notVisible"
             }`}
           >
-            <p className="text-2xl font-semibold text-indigo-950 ">
+            <p className="text-2xl  font-semibold text-indigo-950 ">
               🌟 Highlights 🌟
             </p>
-            <div className="mt-2 space-y-3 text-gray-600">
+            <div className="mt-4 space-y-3 text-gray-600">
               <div className="space-y-6">
                 {highlights.map(({ id, title, des }) => (
                   <div key={id}>
-                    <p className="font-semibold text-indigo-900 mb-1 text-lg">
-                      ✔️ {title}:
-                    </p>
+                    <div className="font-semibold text-primaryDark mb-1 text-lg flex space-x-1">
+                      <Image alt="" src={check} className="w-6"/>
+                      <p>{title}:</p>
+                    </div>
                     <p className="ml-2">
                       <span className="text-[#110a19]">•</span> {des}
                     </p>
@@ -51,7 +53,7 @@ const TelegramDes = () => {
             your trading skills and profitability. Dont miss out on this
             opportunity to gain access to valuable insights and strategies.
           </p>
-          <button className="w-[92%] mx-auto block bg-indigo-700 text-white font-semibold py-2 rounded-xl">
+          <button className="w-[92%] mx-auto block bg-primaryLight text-primaryDark  shadow-xl  border-primaryDark font-semibold py-2 rounded-xl">
             Join Now
           </button>
         </div>
