@@ -11,7 +11,7 @@ const Navbar = () => {
     path === "/service"
       ? {
           borderBottom: "1px solid gray",
-          backgroundColor: "#110a19",
+          backgroundColor: "#5f2916",
           color: "white",
         }
       : {};
@@ -36,7 +36,7 @@ const Navbar = () => {
           </p>
         </Link>
         <Link href={"/service"}>
-          <p className="bg-primaryExtraLight hover:bg-indigo-100 text-primaryDark border-2   font-semibold py-1 px-4 rounded">
+          <p className="bg-primaryExtraLight hover:bg-primaryLight text-primaryDark border-2   font-semibold py-1 px-4 rounded">
             Service
           </p>
         </Link>

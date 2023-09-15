@@ -12,7 +12,7 @@ const WhyChooseUs = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <div className="layout pt-20 pb-24" ref={ref}>
+    <div id="about" className="layout pt-20 pb-24" ref={ref}>
       <p className="text-center font-bold text-lg text-primaryDark">
         Why Choose Us?
       </p>

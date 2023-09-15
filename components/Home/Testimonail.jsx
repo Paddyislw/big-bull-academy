@@ -63,7 +63,7 @@ const Testimonail = () => {
   console.log("data", data);
 
   return (
-    <div className="overflow-hidden bg-primaryExtraLight py-20">
+    <div id="testimonial" className="overflow-hidden bg-primaryExtraLight py-20">
       <div className="layout">
         <p className="text-5xl font-semibold text-center mb-2 lg:text-4xl sm:text-3xl">
           Adored by Our Customers 💟

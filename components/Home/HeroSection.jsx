@@ -8,6 +8,7 @@ import Youtube from "../../utils/svg/Youtube.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
+import { TELEGRAM_LINK } from "@/utils/constant";
 
 const HeroSection = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
@@ -34,7 +35,7 @@ const HeroSection = () => {
         Leverage Expertise for Consistent Profits in Every Trade.
       </p>
       <Link
-        href={"https://telegram.me/intradayjackpot_official"}
+        href={TELEGRAM_LINK}
         target="_blank"
         className="block"
       >
@@ -48,12 +49,12 @@ const HeroSection = () => {
       >
         <Card className={"animate-scale isVisible leafBox-1"} inView={inView}>
           <Image
-            className="w-10 h-9 object-contain mb:w-9 mb:h-6"
+            className="w-10 h-8 object-contain mb:w-9 mb:h-6"
             alt=""
             src={Youtube}
           />
           <p className="text-center w-full mb:text-sm">
-            Trusted by <Span className="text-2xl"> 80k+</Span> Subscribers
+            <Span className="text-2xl">100%</Span> Free Trades
           </p>
         </Card>
         <Card className={"animate-scale isVisible leafBox-2"} inView={inView}>
@@ -63,17 +64,17 @@ const HeroSection = () => {
             src={Telegram}
           />
           <p className="text-center w-full mb:text-sm">
-            <Span className="text-2xl">115k+</Span> Telegram subscribers
+            <Span className="text-2xl">20k+</Span> Telegram subscribers
           </p>
         </Card>
         <Card className={"animate-scale isVisible leafBox-3"} inView={inView}>
           <Image
-            className="w-10 h-8 object-contain mb:w-8 mb:h-6"
+            className="w-10 h-7 object-contain mb:w-8 mb:h-6"
             alt=""
             src={Registered}
           />
           <p className="text-center w-full mb:text-sm">
-            <Span className="text-2xl">SEBI</Span> registered
+            Risk & Reward : <Span className="text-2xl">1:2/1:4 +</Span> 
           </p>
         </Card>
         <Card className={"animate-scale isVisible leafBox-4"} inView={inView}>

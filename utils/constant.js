@@ -1,0 +1,1 @@
+export const TELEGRAM_LINK = 'https://telegram.me/intradayjackpot_official'

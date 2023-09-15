@@ -44,39 +44,39 @@ const FAQ = ({ id, question, answer }) => {
 const faqData = [
   {
     id: 1,
-    question: "What is the difference between Stock and Share?",
+    question: "How do I buy stocks?",
     answer:
-      "A stock and a share are essentially one and the same. They both represent a part of the capital of a joint stock company. In India it was always called shares whereas in the US they have been referred to as stocks. They essentially mean the same thing.",
+      "To buy stocks, you need to open a brokerage account, deposit funds, research and select the stocks you want to purchase, and then place a buy order through your brokerage platform.",
   },
   {
     id: 2,
-    question: "What Instruments Are Traded In The Stock Markets?",
+    question: "How do I choose which stocks to buy?",
     answer:
-      "The stock market trades equity shares of various listed companies. In addition, the markets also trade other instruments like index futures, index options, stock futures, stock options, VIX futures etc. Both equity and derivative products are traded in stock markets.",
+      "Stock selection involves conducting research on companies, analyzing financial statements, considering industry trends, and aligning your investments with your financial goals and risk tolerance.",
   },
   {
     id: 3,
-    question: "Where Do I Find Stock Related Information",
+    question: "How can I manage risk in stock trading?",
     answer:
-      "There are various sources for finding stock related information like the newspaper, websites, company annual reports etc. StockMarketTodayUpdates also provide a plethora of rich stock market content and analytics on the website itself.",
+      "You can manage risk by diversifying your portfolio, setting stop-loss orders, and regularly reviewing and adjusting your investments to align with your risk tolerance.",
   },
   {
     id: 4,
-    question: "What Are The Factors That Determine The Price Of The Stock",
+    question: "What is a stock index?",
     answer:
-      "Price of the stock is normally determined by growth prospects and the profitability of the company. Normally, based on the attractiveness of the stock a P/E ratio is assigned by the market. Stock prices also depend on demand and supply as well as news flows.",
+      "A stock index is a benchmark that tracks the performance of a group of stocks, often representing a specific market or industry sector..",
   },
   {
     id: 5,
-    question: "How Would You Choose Stock For Your Portfolio",
+    question: "What is a bear market vs. a bull market?",
     answer:
-      "You choose stock by screening the stocks in the market on profitability, risk, valuations etc. Such analytics are available on the Tradebulls website for traders to easily create a portfolio. It is always advisable to check with your RM or analyst before taking portfolio decisions.",
+      "A bear market is characterized by declining stock prices, while a bull market sees rising stock prices over an extended period.",
   },
   {
     id: 6,
-    question: "When Is THe Best Time To Buy/Sell Share And Maximize Profit",
+    question: "How do I sell stocks?",
     answer:
-      "There is nothing like a best time to buy the share because it depends on your trading / investment perspective. Traders must buy when the downside risk is the lowest and investors must buy when the upside potential is highest.FAQs",
+      "Selling stocks involves placing a sell order through your brokerage account. The process is similar to buying, where you specify the number of shares and the price at which you want to sell.",
   },
 ];
 

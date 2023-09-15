@@ -36,9 +36,9 @@ const RatingStrip = () => {
 
 const stripData = [
   { id: 1, icon: project, heading: "Completed Projects", title: "100 +" },
-  { id: 2, icon: raise, heading: "Customer Satisfaction", title: "20 %" },
-  { id: 3, icon: rating, heading: "Raised by Clients", title: "$ 10M" },
-  { id: 4, icon: timeline, heading: "Year In Business", title: "2 yrs" },
+  { id: 2, icon: raise, heading: "Customer Satisfaction", title: "100 %" },
+  { id: 3, icon: rating, heading: "Minimum Capital Req.", title: "₹ 15k" },
+  { id: 4, icon: timeline, heading: "Year In Business", title: "5 yrs" },
 ];
 
 export default RatingStrip;
