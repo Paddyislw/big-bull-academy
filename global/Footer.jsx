@@ -57,20 +57,25 @@ const Footer = () => {
         <Link href={"/"} className="block">
           <p className="cursor-pointer  navBtnGreen">Contact Us</p>
         </Link>
-        <Link href={TELEGRAM_LINK} target="_blank" className="block">
+        {/* <Link href={TELEGRAM_LINK} target="_blank" className="block">
           <p className="cursor-pointer  navBtnGreen">Telegram</p>
-        </Link>
+        </Link> */}
       </div>
       <div className="font-semibold space-y-3 mb:text-sm">
-        <a target="_blank" href="/" className="block">
-          <p className="cursor-pointer  navBtnGreen">Email Us</p>
+        <a target="_blank" href={TELEGRAM_LINK} className="block">
+          <p className="cursor-pointer  navBtnGreen">Telegram</p>
         </a>
-        <a target="_blank" href="/" className="block">
-          <p className="cursor-pointer  navBtnGreen">Instagram</p>
-        </a>
-        <a target="_blank" href="/" className="block">
+
+        <p
+          className="cursor-pointer  navBtnGreen"
+          onClick={() => handleNavClick("/#about")}
+        >
+          About Us
+        </p>
+
+        {/* <a target="_blank" href="/" className="block">
           <p className="cursor-pointer  navBtnGreen">WhatsApp</p>
-        </a>
+        </a> */}
       </div>
     </div>
   );
