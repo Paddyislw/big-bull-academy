@@ -44,7 +44,7 @@ const Home = () => {
       <Testimonail />
       <FAQSection />
       <Footer />
-      <Popover showModal={false} setShowModal={setShowModal}/>
+      <Popover showModal={showModal} setShowModal={setShowModal}/>
     </div>
   );
 };
