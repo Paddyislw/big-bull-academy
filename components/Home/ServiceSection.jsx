@@ -5,6 +5,7 @@ import check from "../../utils/svg/check.svg";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import { TELEGRAM_LINK } from "@/utils/constant";
+import Stock from './Stock.png'
 
 const ServiceSection = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
@@ -42,7 +43,7 @@ const ServiceSection = () => {
           </Link>
         </div>
         <div className={inView ? "animate-scale leafBox-2" : "notVisible"}>
-          <Image src={Group} alt="" className="w-[400px] md:w-fit" />
+          <Image src={Stock} alt="" className="w-[420px] md:w-fit md:mt-10" />
         </div>
       </div>
     </div>
