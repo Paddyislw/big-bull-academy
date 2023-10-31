@@ -3,8 +3,9 @@ import Link from "next/link";
 import React from "react";
 import popover from "./popover.jpg";
 import { TELEGRAM_LINK } from "@/utils/constant";
+import Telegram from "../utils/svg/Telegram.svg";
 
-const Popover = ({ showModal,setShowModal }) => {
+const Popover = ({ showModal, setShowModal }) => {
   return (
     <div
       className={`h-screen w-full z-[99999] fixed inset-0 flex justify-center items-center transition-opacity duration-300 ${
@@ -13,7 +14,7 @@ const Popover = ({ showModal,setShowModal }) => {
       style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
     >
       <div
-        className={`w-[600px] h-[384px] mb:w-[370px]  bg-gray-200  relative   ease-in-out transition-all duration-1000   ${
+        className={`w-[400px] h-[384px] mb:w-[370px]  bg-gray-200  relative   ease-in-out transition-all duration-1000   ${
           showModal ? "scale-100" : "scale-50"
         }`}
       >
@@ -53,26 +54,30 @@ const Popover = ({ showModal,setShowModal }) => {
           ✖
         </div>
         <div className="flex bg-[#eeca92] h-full mb:flex-col">
-          <Image
+          {/* <Image
             src={popover}
             alt=""
             className="w-[230px] mx-8 object-contain rounded mb:mx-auto mb:p-2"
-          />
+          /> */}
           <div className="bg-[#15181a] text-white px-6 py-20 space-y-6">
-            <p className="text-2xl font-semibold text-primaryDark mb:text-center">
+            {/* <p className="text-2xl font-semibold text-primaryDark mb:text-center">
               Join a successful trader community.
+            </p> */}
+            <div className="bg-primaryLight w-12 h-12 mx-auto flex justify-center items-center rounded-full">
+              <Image
+                src={Telegram}
+                alt=""
+                className="w-8 h-8 mx-auto pr-[3px] bg-primaryLight  object-contain"
+              />
+            </div>
+            <p className="text-center font-semibold text-2xl px-1">
+              For Accurate Stock Market Tips Our{" "}
+              <span className="text-yellow-500">Telegram Channel</span> 💵
             </p>
-            <p className="mb:text-center">
-              Become a part of a thriving community comprising accomplished
-              traders.
-            </p>
-            <Link
-              href={TELEGRAM_LINK}
-              target="_blank"
-              className="block"
-            >
-              <button className="bg-primaryLight text-primaryDark py-2 px-4 font-semibold rounded-lg mb:mx-auto mb:block">
-                👉 Join Now
+            <Link href={TELEGRAM_LINK} target="_blank" className="block">
+              <button className="bg-primaryLight text-primaryDark py-4 px-4 font-semibold rounded-lg  flex mx-auto space-x-4 items-center">
+                <Image src={Telegram} alt="" className="w-5 h-5" />
+                <p> Join Telegram For Free</p>
               </button>
             </Link>
           </div>
