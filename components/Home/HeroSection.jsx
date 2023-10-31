@@ -19,28 +19,27 @@ const HeroSection = () => {
         trader, even without prior experience{" "}
         <span className="text-primaryLight">❰</span>
       </p>
-      <p className="text-center text-4xl font-semibold leading-[45px] sm:text-2xl">
-        Revealing the{" "}
-        <TypeAnimation
-          sequence={typeSequence}
-          wrapper="span"
-          cursor={true}
-          repeat={Infinity}
-          style={{ color: "#bc6d0f" }}
-        />{" "}
-        to Profitable <br className="sm:hidden" /> Trading in Bank Nifty, Nifty
-        and Stock <br className="sm:hidden" /> options from Day One
+      <p className="text-center text-4xl font-semibold leading-[42px]">
+        Get Equity & <br className="hidden sm:block" /> Derivatives{" "}
+        <br className="hidden sm:block" /> Research{" "}
+        <br className="hidden sm:block" /> Recommendation{" "}
+        <br className="hidden sm:block" /> From A
+        <span className="text-yellow-500"> SEBI REGISTERED RA</span>
       </p>
-      <p className="text-center text-lg font-semibold sm:text-sm">
-        Leverage Expertise for Consistent Profits in Every Trade.
+      <p className="text-center text-xl font-semibold">
+        Highly accurate calls!
       </p>
-      <Link
-        href={TELEGRAM_LINK}
-        target="_blank"
-        className="block"
-      >
-        <button className="block mx-auto bg-primaryExtraLight text-primaryDark py-4 px-16 text-2xl rounded-lg font-semibold">
-          Join Now →
+      <Link href={TELEGRAM_LINK} target="_blank" className="block">
+        <button className="block mx-auto bg-primaryExtraLight text-primaryDark py-4 px-16 text-2xl rounded-lg font-semibold sm:text-xl">
+          Join For Free Trial Calls →
+        </button>
+      </Link>
+      <div className="pb-10 space-y-4 text-center font-semibold">
+        {pointsData.map((item) => item.data)}
+      </div>
+      <Link href={TELEGRAM_LINK} target="_blank" className="block">
+        <button className="block mx-auto bg-primaryExtraLight text-primaryDark py-4 px-16 text-2xl rounded-lg font-semibold sm:text-xl">
+          Join For Free Trial Calls →
         </button>
       </Link>
       <div
@@ -64,7 +63,7 @@ const HeroSection = () => {
             src={Telegram}
           />
           <p className="text-center w-full mb:text-sm">
-            <Span className="text-2xl">20k+</Span> Telegram subscribers
+            <Span className="text-2xl">100k+</Span> Telegram subscribers
           </p>
         </Card>
         <Card className={"animate-scale isVisible leafBox-3"} inView={inView}>
@@ -74,7 +73,7 @@ const HeroSection = () => {
             src={Registered}
           />
           <p className="text-center w-full mb:text-sm">
-            Risk & Reward : <Span className="text-2xl">1:2/1:4 +</Span> 
+            Risk & Reward : <Span className="text-2xl">1:2/1:4 +</Span>
           </p>
         </Card>
         <Card className={"animate-scale isVisible leafBox-4"} inView={inView}>
@@ -134,6 +133,24 @@ const cardData = [
   { text: "", cardImage: "" },
   { text: "", cardImage: "" },
   { text: "", cardImage: "" },
+];
+
+const pointsData = [
+  { id: 1, data: <p>💰Trade like an expert with no experience needed 📈🎓</p> },
+  {
+    id: 2,
+    data: <p>🔎 Discover a secret profitable method for trading 💼💸</p>,
+  },
+  { id: 3, data: <p>🤝Trusted by 100K+ traders for consistent results🤝💯</p> },
+  {
+    id: 4,
+    data: (
+      <p>
+        📚 Benefit from our years of experience and start making profits from
+        day one 📚
+      </p>
+    ),
+  },
 ];
 
 export default HeroSection;
