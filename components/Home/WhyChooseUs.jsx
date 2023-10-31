@@ -13,16 +13,15 @@ const WhyChooseUs = () => {
 
   return (
     <div id="about" className="layout pt-20 pb-24" ref={ref}>
-      <p className="text-center font-bold text-lg text-primaryDark">
+      <p className="text-center font-bold text-primaryDark text-2xl">
         Why Choose Us?
       </p>
-      <p className="text-center text-4xl font-semibold mb-4">
+      {/* <p className="text-center text-4xl font-semibold mb-4">
         Our Best Features For You
-      </p>
-      <p className="text-center mb-8">
-        Choose us for a transformational trading experience, where success knows
-        no bounds. With our unmatched <br /> expertise , your financial
-        aspirations find their ultimate path to prosperity.
+      </p> */}
+      <p className="text-center mb-8 font-semibold mt-4">
+        Join This Channel To Start Your Journey & To Be Part of 5% Traders Who
+        Always Make Money in Stock Markets.Profits guaranteed! 💰💰
       </p>
       <div className="flex justify-between mt-16 md:flex-col md:space-y-10">
         <div className="grid grid-cols-2 w-fit gap-8 xl:gap-2 md:mx-auto md:gap-8 sm:gap-2">
