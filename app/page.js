@@ -27,7 +27,7 @@ const Home = () => {
     <div className="bg-gray-100">
       {/* <div className="h-10 bg-indigo-700 flex items-center justify-center text-white">SEBI REGISTERD</div> */}
       <div
-        className="text-white relative  w-full h-[750px] sm:h-[800px] xmb:h-[850px]"
+        className="text-white relative  w-full h-full sm:h-auto "
         style={{
           backgroundImage: `url(${img9.src})`,
           backgroundSize: "cover",
@@ -36,7 +36,7 @@ const Home = () => {
       >
         <Navbar />
         <HeroSection />
-        <div className="bg-black opacity-60 absolute top-0 z-0  w-full h-[750px] sm:h-[800px] xmb:h-[850px]"></div>
+        <div className="bg-black opacity-60 absolute top-0 z-0  w-full h-full sm:h-full "></div>
       </div>
       <WhyChooseUs />
       <RatingStrip />
@@ -44,7 +44,7 @@ const Home = () => {
       <Testimonail />
       <FAQSection />
       <Footer />
-      <Popover showModal={showModal} setShowModal={setShowModal}/>
+      <Popover showModal={false} setShowModal={setShowModal}/>
     </div>
   );
 };
