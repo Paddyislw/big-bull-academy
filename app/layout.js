@@ -14,7 +14,7 @@ const queryClient = new QueryClient();
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-      </Head>
+      </head>
       <QueryClientProvider client={queryClient}>
         <body className={inter.className}>{children}</body>
       </QueryClientProvider>
